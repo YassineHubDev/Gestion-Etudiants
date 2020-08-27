@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+		
+		
+<hibernate-configuration>
+
+
+    <session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+     	<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://93.188.160.43:3306/u977319663_gescolaire?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.autoReconnect">true</property>
+        <property name="hibernate.connection.username">u977319663_doranco</property>
+        <property name="hibernate.connection.password">Doranco2020</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+<!--         <property name="hibernate.transaction.coordinator_class">jta</property> -->
+        
+        <mapping class="fr.doranco.gestion.scolarite.entity.User"/>
+        <mapping class="fr.doranco.gestion.scolarite.entity.Discipline"/>	 
+        <mapping class="fr.doranco.gestion.scolarite.entity.Mark"/>
+        <mapping class="fr.doranco.gestion.scolarite.entity.SchoolReport"/>
+    </session-factory>
+    
+    
+</hibernate-configuration>
